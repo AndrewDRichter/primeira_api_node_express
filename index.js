@@ -2,9 +2,13 @@ const express = require("express");
 
 const server = express();
 
-server.get('/curso', (req, res) => {
-    console.log(req)
-    return res.json({'ola': 'mundo'})
+
+
+const cursos = ['NodeJS', 'JavaScript', 'React', 'NextJS']
+
+server.get('/curso/:index', (req, res) => {
+    const { index } = req.params;
+    return res.json(cursos[index])
 })
 
 server.listen(3000);

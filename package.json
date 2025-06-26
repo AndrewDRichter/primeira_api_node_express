@@ -1,7 +1,13 @@
 {
   "name": "primeira_aula_node_sujeito",
   "packageManager": "yarn@4.9.2",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
