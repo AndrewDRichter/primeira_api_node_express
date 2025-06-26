@@ -1,0 +1,7 @@
+{
+  "name": "primeira_aula_node_sujeito",
+  "packageManager": "yarn@4.9.2",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
