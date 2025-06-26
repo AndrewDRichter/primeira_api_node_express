@@ -28,6 +28,9 @@ function checkIndex(req, res, next) {
     if (!curso) {
         res.status(404).json({ error: "Curso não existente." })
     }
+
+    req.curso = curso;
+
     return next();
 }
 
@@ -36,8 +39,8 @@ server.get('/cursos', (req, res) => {
 })
 
 server.get('/cursos/:index', checkIndex, checkIndex, (req, res) => {
-    const { index } = req.params;
-    if (cursos[index]) return res.json(cursos[index])
+    // const { index } = req.params;
+    if (req.curso) return res.json(req.curso)
     else return res.json({ error: 'Não há curso com esse index.' })
 })
 
